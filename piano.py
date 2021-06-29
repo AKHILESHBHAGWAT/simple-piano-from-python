@@ -1,6 +1,7 @@
 import pygame
 import sys
 from tkinter import *
+import os
 pygame.init()
 #INITIALIZE PYGAME
 root = Tk()
@@ -21,11 +22,11 @@ frame2.pack()
 from playsound import playsound
 
 playsound("START.mp3")
-
+path = os.getcwd()
 
 def value_A():
     num1.set("SA")
-    sound = pygame.mixer.Sound("D:\AKHILESH\PYTHON\Music_Notes\C_s.wav")
+    sound = pygame.mixer.Sound(path+"\C_s.wav")
     sound.play()
     return
 Button1 = Button(root,text="",command=value_A,width=5,height=20,borderwidth="5",relief="raised",bg="White").pack(side=LEFT)                
